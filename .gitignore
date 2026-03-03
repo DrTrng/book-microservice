@@ -1,0 +1,16 @@
+# OS
+.DS_Store
+
+# Environment
+.env
+.env.*
+
+# Docker
+**/node_modules
+**/dist
+**/build
+**/.idea
+**/.vscode
+
+# Logs
+*.log
