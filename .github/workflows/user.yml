@@ -1,0 +1,25 @@
+name: Build User Service
+
+on:
+  push:
+    branches:
+      - "**"
+    paths:
+      - "user-service/**"
+      - "core-service/**"
+
+jobs:
+  build-user:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Build user service
+        run: |
+          cd user-service
+          mvn clean package -DskipTests

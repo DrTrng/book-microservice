@@ -1,0 +1,25 @@
+name: Build Payment Service
+
+on:
+  push:
+    branches:
+      - "**"
+    paths:
+      - "payment-service/**"
+      - "core-service/**"
+
+jobs:
+  build-payment:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Build payment service
+        run: |
+          cd payment-service
+          mvn clean package -DskipTests
