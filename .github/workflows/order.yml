@@ -1,11 +1,11 @@
-name: Build Auth Service
+name: Build Order Service
 
 on:
   push:
     branches:
       - "**"
     paths:
-      - "auth-service/**"
+      - "order-service/**"
 
 jobs:
   build-product:
@@ -18,7 +18,7 @@ jobs:
           distribution: temurin
           java-version: '17'
 
-      - name: Build auth service
+      - name: Build order service
         run: |
-          cd auth-service
+          cd order-service
           mvn clean package -DskipTests

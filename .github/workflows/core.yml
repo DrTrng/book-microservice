@@ -1,11 +1,11 @@
-name: Build Auth Service
+name: Build Core Service
 
 on:
   push:
     branches:
       - "**"
     paths:
-      - "auth-service/**"
+      - "core-service/**"
 
 jobs:
   build-product:
@@ -18,7 +18,7 @@ jobs:
           distribution: temurin
           java-version: '17'
 
-      - name: Build auth service
+      - name: Build core service
         run: |
-          cd auth-service
+          cd core-service
           mvn clean package -DskipTests
