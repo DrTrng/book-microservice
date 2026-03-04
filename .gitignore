@@ -11,6 +11,12 @@
 **/build
 **/.idea
 **/.vscode
+.vscode
 
 # Logs
 *.log
+
+# AI tools
+_bmad-output
+_bmad/_memory/**
+!_bmad/_memory/tech-writer-sidecar/documentation-standards.md
