@@ -6,6 +6,7 @@ on:
       - "**"
     paths:
       - "auth-service/**"
+      - "core-service/**"
 
 jobs:
   build-product:

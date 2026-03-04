@@ -6,6 +6,7 @@ on:
       - "**"
     paths:
       - "order-service/**"
+      - "core-service/**"
 
 jobs:
   build-product:
