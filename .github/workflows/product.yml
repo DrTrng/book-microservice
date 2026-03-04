@@ -3,7 +3,7 @@ name: Build Auth Service
 on:
   push:
     paths:
-      - "auth/**"
+      - "product/**"
       - "core/**"
 
 jobs:
@@ -15,5 +15,5 @@ jobs:
 
       - name: Build auth service
         run: |
-          cd auth-service
+          cd product-service
           mvn clean package -DskipTests
