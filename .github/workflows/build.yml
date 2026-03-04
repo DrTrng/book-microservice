@@ -1,23 +1,23 @@
-name: Build Test
+# name: Build Test
 
-on:
-  push:
-    branches:
-      - "**"
-    paths:
-      - "product-service/**"
-      - "core-service/**"
-      - "auth-service/**"
+# on:
+#   push:
+#     branches:
+#       - "**"
+#     paths:
+#       - "product-service/**"
+#       - "core-service/**"
+#       - "auth-service/**"
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/checkout@v4
 
-      - name: Debug repo structure
-        run: |
-          pwd
-          ls -la
-      - name: Just build
-        run: echo "CI is running"
+#       - name: Debug repo structure
+#         run: |
+#           pwd
+#           ls -la
+#       - name: Just build
+#         run: echo "CI is running"
