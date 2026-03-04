@@ -1,15 +1,15 @@
-name: Build Test
+# name: Build Test
 
-on:
-  push:
-    branches:
-      - "**"
+# on:
+#   push:
+#     branches:
+#       - "**"
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/checkout@v4
 
-      - name: Just build
-        run: echo "CI is running"
+#       - name: Just build
+#         run: echo "CI is running"
