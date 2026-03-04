@@ -9,7 +9,7 @@ on:
       - "core-service/**"
 
 jobs:
-  build-product:
+  build-user:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
