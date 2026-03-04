@@ -1,15 +1,14 @@
-name: Build Auth Service
+name: Build Product Service
 
 on:
   push:
     paths:
-      - "auth/**"
-      - "core/**"
+      - "auth-service/**"
+      - "core-service/**"
 
 jobs:
-  build-auth:
+  build-product:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v4
 

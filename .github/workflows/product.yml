@@ -1,19 +1,18 @@
-name: Build Auth Service
+name: Build Product Service
 
 on:
   push:
     paths:
-      - "product/**"
-      - "core/**"
+      - "product-service/**"
+      - "core-service/**"
 
 jobs:
-  build-auth:
+  build-product:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v4
 
-      - name: Build auth service
+      - name: Build product service
         run: |
           cd product-service
           mvn clean package -DskipTests
