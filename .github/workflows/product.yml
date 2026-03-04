@@ -3,7 +3,7 @@ name: Build Product Service
 on:
   push:
     branches:
-      - "test/ci-cd-auth"
+      - "**"
     paths:
       - "product-service/**"
       - "core-service/**"
@@ -13,6 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: |
+      - name: Build product service
+        run: |
           cd product-service
           mvn clean package -DskipTests
