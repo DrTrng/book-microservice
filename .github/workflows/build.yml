@@ -4,14 +4,17 @@ on:
   push:
     branches:
       - "**"
+    paths:
+      - "product-service/**"
+      - "core-service/**"
+      - "auth-service/**"
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      
-      # 👇 STEP DEBUG (RẤT QUAN TRỌNG)
+
       - name: Debug repo structure
         run: |
           pwd

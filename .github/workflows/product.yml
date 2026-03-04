@@ -11,8 +11,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
-      - name: Build product service
-        run: |
+      - run: |
           cd product-service
           mvn clean package -DskipTests
