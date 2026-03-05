@@ -33,3 +33,16 @@ Verify installation:
 ```bash
 docker -v
 docker compose version
+
+Connect DB
+email: admin@admin.com
+password: admin
+// information db login 
+Host name/address: postgres
+Port: 5434
+Maintenance DB: postgres
+Username: dev
+Password: dev
+
+//Swagger Config : 
+http://localhost:8084/swagger-ui/index.html
