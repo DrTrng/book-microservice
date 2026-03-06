@@ -1,11 +1,9 @@
 package com.example.user.entity;
 
-
 import jakarta.persistence.*;
+import java.util.UUID;
 import lombok.*;
 import org.hibernate.annotations.UuidGenerator;
-
-import java.util.UUID;
 
 @Entity
 @Table(name = "users")
@@ -16,16 +14,13 @@ import java.util.UUID;
 @Builder
 public class User extends BaseEntity {
 
-    @Id
-    @GeneratedValue
-    @UuidGenerator
-    private UUID id;
+  @Id @GeneratedValue @UuidGenerator private UUID id;
 
-    private String username;
+  private String username;
 
-    private String email;
+  private String email;
 
-    private String phoneNumber;
+  private String phoneNumber;
 
-    private String password;
+  private String password;
 }

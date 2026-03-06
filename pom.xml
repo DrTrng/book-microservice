@@ -13,9 +13,9 @@
 
 	<modules>
 		<module>parent-service</module>
+		<module>configuration-service</module>
 		<module>core-service</module>
 		<module>auth-service</module>
-		<module>configuration-service</module>
 		<module>order-service</module>
 		<module>payment-service</module>
 		<module>product-service</module>
@@ -31,5 +31,6 @@
 		<spotless.version>2.43.0</spotless.version>
 		<googleJavaFormat.version>1.19.1</googleJavaFormat.version>
 		<lombok.version>1.18.34</lombok.version>
+		<spring-cloud.version>2025.1.0</spring-cloud.version>
 	</properties>
 </project>
