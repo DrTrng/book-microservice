@@ -12,7 +12,7 @@ services:
       - "5434:5432"
     volumes:
       - pg_data:/var/lib/postgresql/data
-      - ./init-db:/docker-entrypoint-initdb.d
+      - ./docker/postgres:/docker-entrypoint-initdb.d
     restart: unless-stopped
 
   pgadmin:
@@ -72,7 +72,7 @@ services:
   # Kafka (KRaft mode)
   # =====================
   kafka:
-    image: apache/kafka:latest
+    image: apache/kafka:4.1.1
     container_name: kafka
     ports:
       - "9092:9092"
@@ -85,8 +85,11 @@ services:
       KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: CONTROLLER:PLAINTEXT,PLAINTEXT:PLAINTEXT
       KAFKA_CONTROLLER_LISTENER_NAMES: CONTROLLER
       KAFKA_AUTO_CREATE_TOPICS_ENABLE: "true"
+    volumes:
+        - kafka_data:/var/lib/kafka/data
     restart: unless-stopped
 
 volumes:
   pg_data:
   es_data:
+  kafka_data:
