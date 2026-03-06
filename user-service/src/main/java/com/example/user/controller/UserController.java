@@ -1,9 +1,8 @@
-package com.example.user_service.controller;
+package com.example.user.controller;
 
-import com.example.user_service.model.UserRequest;
-import com.example.user_service.entity.User;
-import com.example.user_service.service.UserService;
-import lombok.RequiredArgsConstructor;
+import com.example.user.model.UserRequest;
+import com.example.user.entity.User;
+import com.example.user.service.UserService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
