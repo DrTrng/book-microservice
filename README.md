@@ -46,3 +46,6 @@ Password: dev
 
 //Swagger Config : 
 http://localhost:8084/swagger-ui/index.html
+
+# Build project : 
+mvn clean install -U -DskipTests
