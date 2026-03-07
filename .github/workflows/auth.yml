@@ -22,6 +22,9 @@ jobs:
           distribution: temurin
           java-version: '17'
           cache: maven
+          
+      - name: Install aggregator pom
+        run: mvn clean install -N -DskipTests
 
       - name: Install parent-service
         run: mvn clean install -pl parent-service -DskipTests
