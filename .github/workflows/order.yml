@@ -18,5 +18,10 @@ jobs:
           distribution: temurin
           java-version: '17'
 
+      - name: Spotless format check
+        run: |
+          cd order-service
+          mvn spotless:check
+          
       - name: Build order service
         run: mvn clean install -pl order-service -am -DskipTests
