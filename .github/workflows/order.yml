@@ -19,6 +19,4 @@ jobs:
           java-version: '17'
 
       - name: Build order service
-        run: |
-          cd order-service
-          mvn clean package -DskipTests
+        run: mvn clean install -pl order-service -am -DskipTests

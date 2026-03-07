@@ -17,8 +17,7 @@ jobs:
         with:
           distribution: temurin
           java-version: '17'
+          cache: maven
 
-      - name: Build auth service
-        run: |
-          cd auth-service
-          mvn clean package -DskipTests
+      - name: Build auth-service
+        run: mvn clean install -pl auth-service -am -DskipTests

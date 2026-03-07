@@ -4,9 +4,9 @@ auth-service start
         ▼
 config-server (8888)
         │
-        │ read fron
+        │ read from
         ▼
 Git config-repo
         │
         ▼
-auth-service.yml
+auth-service.properties

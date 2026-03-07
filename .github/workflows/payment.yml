@@ -19,6 +19,4 @@ jobs:
           java-version: '17'
 
       - name: Build payment service
-        run: |
-          cd payment-service
-          mvn clean package -DskipTests
+        run: mvn clean install -pl payment-service -am -DskipTests
