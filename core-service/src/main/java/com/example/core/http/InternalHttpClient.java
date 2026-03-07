@@ -37,6 +37,15 @@ public class InternalHttpClient {
                 .body(responseType);
     }
 
+    public <T> T patch(String url, Object body, Class<T> responseType){
+        return restClient
+                .patch()
+                .uri(url)
+                .body(body)
+                .retrieve()
+                .body(responseType);
+    }
+
     public void delete(String url) {
         restClient
                 .delete()

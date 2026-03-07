@@ -29,6 +29,16 @@ Make sure the following are installed on your machine:
 - Docker Compose **v2+**
 - Recommended RAM: **8 GB or more**
 
+## Service Ports
+| Service             | URL                 |
+|---------------------| ------------------- |
+| Auth                | `http://localhost:8080` |
+| Order               | `http://localhost:8081` |
+| Payment             | `http://localhost:8082` |
+| Product             | `http://localhost:8083` |
+| User                | `http://localhost:8084` |
+| Insert service name | `http://localhost:` |
+
 Verify installation:
 ```bash
 docker -v
