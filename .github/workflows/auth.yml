@@ -9,6 +9,8 @@ on:
       - "core-service/**"
       - "parent-service/**"
 
+    workflow_dispatch:
+
 jobs:
   build-auth:
     runs-on: ubuntu-latest
