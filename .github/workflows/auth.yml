@@ -3,10 +3,9 @@ name: Build Auth Service
 on:
   push:
     branches:
-      - "**"
+      - "main"
     paths:
       - "auth-service/**"
-      - "core-service/**"
 
 jobs:
   build-auth:

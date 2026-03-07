@@ -3,10 +3,9 @@ name: Build Payment Service
 on:
   push:
     branches:
-      - "**"
+      - "main"
     paths:
       - "payment-service/**"
-      - "core-service/**"
 
 jobs:
   build-payment:

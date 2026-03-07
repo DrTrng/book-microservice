@@ -3,7 +3,7 @@ name: Build Core Service
 on:
   push:
     branches:
-      - "**"
+      - "main"
     paths:
       - "core-service/**"
 
