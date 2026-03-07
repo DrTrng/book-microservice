@@ -18,6 +18,11 @@ jobs:
           distribution: temurin
           java-version: '17'
 
+      - name: Spotless format check
+        run: |
+          cd core-service
+          mvn spotless:check
+          
       - name: Build core service
         run: |
           cd core-service

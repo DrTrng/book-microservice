@@ -18,6 +18,11 @@ jobs:
           distribution: temurin
           java-version: '17'
           cache: maven
+      
+      - name: Spotless format check
+        run: |
+          cd auth-service
+          mvn spotless:check
 
       - name: Build auth-service
         run: mvn clean install -pl auth-service -am -DskipTests
