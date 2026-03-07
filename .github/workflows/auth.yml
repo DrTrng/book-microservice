@@ -8,8 +8,6 @@ on:
       - "auth-service/**"
       - "core-service/**"
 
-  workflow_dispatch:
-
 jobs:
   build-auth:
     runs-on: ubuntu-latest
