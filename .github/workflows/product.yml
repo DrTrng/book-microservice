@@ -20,6 +20,4 @@ jobs:
           java-version: '17'
 
       - name: Build product service
-        run: |
-          cd product-service
-          mvn clean package -DskipTests
+        run: mvn clean install -pl product-service -am -DskipTests

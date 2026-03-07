@@ -20,6 +20,4 @@ jobs:
           java-version: '17'
 
       - name: Build user service
-        run: |
-          cd user-service
-          mvn clean package -DskipTests
+        run: mvn clean install -pl user-service -am -DskipTests

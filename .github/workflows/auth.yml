@@ -7,7 +7,6 @@ on:
     paths:
       - "auth-service/**"
       - "core-service/**"
-      - "parent-service/**"
 
   workflow_dispatch:
 
