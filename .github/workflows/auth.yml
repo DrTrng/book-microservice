@@ -22,17 +22,6 @@ jobs:
           distribution: temurin
           java-version: '17'
           cache: maven
-          
-      - name: Install aggregator pom
-        run: mvn clean install -N -DskipTests
 
-      - name: Install parent-service
-        run: mvn clean install -pl parent-service -DskipTests
-
-      - name: Install core-service
-        run: mvn clean install -pl core-service -DskipTests
-
-      - name: Build auth service
-        run: |
-          cd auth-service
-          mvn clean package -DskipTests
+      - name: Build auth-service
+        run: mvn clean install -pl auth-service -am -DskipTests
