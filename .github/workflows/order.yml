@@ -3,10 +3,9 @@ name: Build Order Service
 on:
   push:
     branches:
-      - "**"
+      - "main"
     paths:
       - "order-service/**"
-      - "core-service/**"
 
 jobs:
   build-order:
