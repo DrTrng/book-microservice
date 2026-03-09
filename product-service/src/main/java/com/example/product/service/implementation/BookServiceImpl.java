@@ -1,4 +1,4 @@
-package com.example.product.service;
+package com.example.product.service.implementation;
 
 import com.example.product.entity.Book;
 import com.example.product.mapper.BookMapper;
@@ -6,6 +6,8 @@ import com.example.product.model.BookResponse;
 import com.example.product.model.CreateBookRequest;
 import com.example.product.repository.BookRepository;
 import java.util.UUID;
+
+import com.example.product.service.BookService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

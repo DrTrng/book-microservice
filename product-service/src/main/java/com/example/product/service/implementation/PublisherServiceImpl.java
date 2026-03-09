@@ -1,8 +1,9 @@
-package com.example.product.service;
+package com.example.product.service.implementation;
 
 import com.example.product.entity.Publisher;
 import com.example.product.model.CreatePublisherRequest;
 import com.example.product.repository.PublisherRepository;
+import com.example.product.service.PublisherService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

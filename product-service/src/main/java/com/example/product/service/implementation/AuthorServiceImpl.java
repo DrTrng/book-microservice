@@ -1,8 +1,9 @@
-package com.example.product.service;
+package com.example.product.service.implementation;
 
 import com.example.product.entity.Author;
 import com.example.product.model.CreateAuthorRequest;
 import com.example.product.repository.AuthorRepository;
+import com.example.product.service.AuthorService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
