@@ -39,6 +39,45 @@ Make sure the following are installed on your machine:
 | User                | `http://localhost:8084` |
 | Insert service name | `http://localhost:` |
 
+## Error Code Convention
+Error codes follow the pattern: `[Service Number][HTTP Status][Sequence]`
+
+For example, the code `140901` means:
+```
+1: Auth Service
+ 
+409: HTTP 409 Conflict
+  
+01: Error message index
+```
+
+### Service Numbers
+| Service  | Number |
+|----------|--------|
+| Auth     | 1      |
+| Order    | 2      |
+| Payment  | 3      |
+| Product  | 4      |
+| User     | 5      |
+
+### Examples
+| Code  | Service | HTTP Status | Meaning                  |
+|-------|---------|-------------|--------------------------|
+| 14091 | Auth    | 409         | Duplicate email          |
+| 14011 | Auth    | 401         | Invalid credentials      |
+| 14012 | Auth    | 401         | Token expired            |
+| 54091 | User    | 409         | Duplicate email          |
+| 54041 | User    | 404         | User not found           |
+| 24041 | Order   | 404         | Order not found          |
+
+### In `messages.properties`
+
+```properties
+# User Service (5xxxx)
+54091=Email already exists: {0}
+54041=User not found with id: {0}
+```
+
 Verify installation:
 ```bash
 docker -v
