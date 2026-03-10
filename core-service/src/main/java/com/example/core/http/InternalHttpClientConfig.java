@@ -28,6 +28,7 @@ public class InternalHttpClientConfig {
     return RestClient.builder()
         .requestFactory(requestFactory)
         .defaultHeader(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE)
+        .requestInterceptor(new InternalHttpClientLoggingInterceptor())
         .build();
   }
 }

@@ -1,9 +1,14 @@
 package com.example.user.entity;
 
-import jakarta.persistence.*;
-import java.util.UUID;
-import lombok.*;
-import org.hibernate.annotations.UuidGenerator;
+import com.example.core.entity.BaseEntity;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 
 @Entity
 @Table(name = "users")
@@ -14,13 +19,9 @@ import org.hibernate.annotations.UuidGenerator;
 @Builder
 public class User extends BaseEntity {
 
-  @Id @GeneratedValue @UuidGenerator private UUID id;
-
   private String username;
 
   private String email;
-
-  private String phoneNumber;
 
   private String password;
 }
