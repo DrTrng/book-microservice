@@ -1,6 +1,6 @@
 package com.example.auth.client;
 
-import com.example.auth.constant.AuthApiPaths;
+import com.example.auth.constant.AuthApiPath;
 import com.example.auth.model.auth.CreateUserRequest;
 import com.example.auth.model.auth.CreateUserResponse;
 import com.example.core.http.InternalHttpClient;
@@ -16,6 +16,6 @@ public class UserClient {
 
   public CreateUserResponse createUser(CreateUserRequest request) {
     return httpClient.post(
-        services.getUserUrl() + AuthApiPaths.USER_CLIENT, request, CreateUserResponse.class);
+        services.getUserUrl() + AuthApiPath.USER_CLIENT, request, CreateUserResponse.class);
   }
 }

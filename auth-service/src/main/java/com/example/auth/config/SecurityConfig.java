@@ -1,6 +1,6 @@
 package com.example.auth.config;
 
-import com.example.auth.constant.AuthApiPaths;
+import com.example.auth.constant.AuthApiPath;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -23,7 +23,7 @@ public class SecurityConfig {
                         "/swagger-ui/**",
                         "/v3/api-docs/**",
                         "/swagger-ui.html",
-                        AuthApiPaths.AUTH_BASE + AuthApiPaths.REGISTER)
+                        AuthApiPath.AUTH_BASE + AuthApiPath.REGISTER)
                     .permitAll()
                     .anyRequest()
                     .authenticated());

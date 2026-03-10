@@ -2,8 +2,8 @@ package com.example.auth.constant;
 
 import com.example.core.apipath.ApiPaths;
 
-public class AuthApiPaths {
-  private AuthApiPaths() {}
+public class AuthApiPath {
+  private AuthApiPath() {}
 
   private static final String VERSION = "/v1"; // use when need for versioning arises
 

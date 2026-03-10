@@ -1,39 +1,50 @@
 package com.example.user.controller;
 
+import com.example.core.dto.ApiResponse;
+import com.example.user.constant.UserApiPath;
+import com.example.user.constant.UserMessage;
 import com.example.user.entity.User;
-import com.example.user.model.UserRequest;
+import com.example.user.model.user.UserRequest;
+import com.example.user.model.user.UserResponse;
 import com.example.user.service.UserService;
+
 import java.util.List;
 import java.util.UUID;
+
+import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/api/users")
+@RequestMapping(UserApiPath.USER_BASE)
+@RequiredArgsConstructor
 public class UserController {
 
-  private final UserService userService;
+    private final UserService userService;
 
-  public UserController(UserService userService) {
-    this.userService = userService;
-  }
 
-  @PostMapping
-  public User create(@RequestBody UserRequest request) {
-    return userService.createUser(request);
-  }
+    @PostMapping
+    public ResponseEntity<ApiResponse<UserResponse>> create(@RequestBody UserRequest request) {
 
-  @GetMapping
-  public List<User> getAll() {
-    return userService.getAll();
-  }
+        ApiResponse<UserResponse> response =
+                ApiResponse.of(HttpStatus.CREATED, userService.createUser(request));
+        return ResponseEntity.status(response.getStatus()).body(response);
+    }
 
-  @GetMapping("/{id}")
-  public User getById(@PathVariable UUID id) {
-    return userService.getById(id);
-  }
+    @GetMapping
+    public ApiResponse<List<UserResponse>> getAll() {
+        return ApiResponse.of(HttpStatus.OK, userService.getAll());
+    }
 
-  @DeleteMapping("/{id}")
-  public void delete(@PathVariable UUID id) {
-    userService.delete(id);
-  }
+    @GetMapping("/{id}")
+    public ApiResponse<UserResponse> getById(@PathVariable UUID id) {
+        return ApiResponse.of(HttpStatus.OK, userService.getById(id));
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<ApiResponse<Void>> delete(@PathVariable UUID id) {
+        userService.delete(id);
+        return ResponseEntity.ok(ApiResponse.of(HttpStatus.NO_CONTENT, UserMessage.USER_DELETED));
+    }
 }

@@ -1,6 +1,6 @@
 package com.example.auth.controller;
 
-import com.example.auth.constant.AuthApiPaths;
+import com.example.auth.constant.AuthApiPath;
 import com.example.auth.model.auth.CreateUserRequest;
 import com.example.auth.model.auth.CreateUserResponse;
 import com.example.auth.service.AuthService;
@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping(AuthApiPaths.AUTH_BASE)
+@RequestMapping(AuthApiPath.AUTH_BASE)
 @RequiredArgsConstructor
 public class AuthController {
 
@@ -36,7 +36,7 @@ public class AuthController {
                 mediaType = "application/json",
                 schema = @Schema(implementation = CreateUserResponse.class)))
   })
-  @PostMapping(AuthApiPaths.REGISTER)
+  @PostMapping(AuthApiPath.REGISTER)
   public ResponseEntity<ApiResponse<CreateUserResponse>> registerUser(
       @RequestBody CreateUserRequest createUserRequest) {
 
