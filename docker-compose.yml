@@ -89,7 +89,21 @@ services:
         - kafka_data:/var/lib/kafka/data
     restart: unless-stopped
 
+  # =====================
+  # Redis
+  # =====================
+  redis:
+    image: redis:7-alpine
+    container_name: redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    command: redis-server --appendonly yes
+    restart: unless-stopped
+
 volumes:
   pg_data:
   es_data:
   kafka_data:
+  redis_data:
