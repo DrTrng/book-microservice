@@ -1,5 +1,11 @@
 package com.example.user.service.impl;
 
+import java.util.List;
+import java.util.UUID;
+
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.stereotype.Service;
+
 import com.example.core.exception.BookBaseException;
 import com.example.user.entity.User;
 import com.example.user.exception.UserException;
@@ -7,11 +13,8 @@ import com.example.user.model.user.UserRequest;
 import com.example.user.model.user.UserResponse;
 import com.example.user.repository.UserRepository;
 import com.example.user.service.UserService;
-import java.util.List;
-import java.util.UUID;
+
 import lombok.RequiredArgsConstructor;
-import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.stereotype.Service;
 
 @Service
 @RequiredArgsConstructor
